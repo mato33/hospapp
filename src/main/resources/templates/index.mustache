@@ -28,7 +28,7 @@
 <div class="container">
 	<br/>
 	<h3>PCR 병원 조회 서비스 </h3>
-  	<form action="/" method="get">
+  	<form action="/" method="get" onsubmit="submit(this);">
 		<div class="mb-3 mt-3">
         <select class="form-select" name="sidoCdNm" id="sidoCdNm">
           {{#sidoCdNms}}
@@ -45,7 +45,7 @@
           {{/sgguCdNms}}
         </select>
       </div>
-		<button type="submit" class="btn btn-primary">찾기</button>
+		<button type="button" class="btn btn-primary" id="btn-submit">찾기</button>
 	</form>
 </div>
 
@@ -59,16 +59,18 @@
 	        <th>병원주소</th>
 	      </tr>
 	    </thead>
-	    <tbody>
-	    {{#hospital}}
+	    <tbody id="tbody-hospital">
+	    {{#hospitals}}
 	      <tr>
 	        <td>{{yadmNm}}</td>
 	        <td>{{pcrPsblYn}}</td>
 	        <td>{{addr}}</td>
 	      </tr>
-	    {{/hospital}} 
+	    {{/hospitals}} 
 	    </tbody>
  	</table>
  	</div>
+ 	
+ 	<script src="js/index.js"></script>
 </body>
 </html>

@@ -31,4 +31,11 @@ public class HospitalController {
         System.out.println(TAG + hRepository.mFindSidoCdNm().size());
         return hRepository.mFindHospital(sidoCdNm, sgguCdNm);
     }
+	
+	 @GetMapping("/api/sgguCdNm")
+    // 응답도 json으로 할 예정
+    public @ResponseBody List<String> sgguCdNm(String sidoCdNm) { // 아니네 그냥 쿼리스트링 받으면 되네
+		 System.out.println(TAG + hRepository.mFindSggucdnm(sidoCdNm).size());
+        return hRepository.mFindSggucdnm(sidoCdNm);
+    }
 }
