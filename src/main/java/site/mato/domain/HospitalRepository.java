@@ -10,7 +10,7 @@ import org.springframework.data.repository.query.Param;
 //@Repository
 public interface HospitalRepository extends JpaRepository<Hospital,Integer>{
 	// name query 사용시에 어노테이션 필요
-    @Query(value = "SELECT * FROM hospital WHERE SIDO_CD_NM = :sidoCdNm AND SGGU_CD_NM = :sgguCdNm AND pcrPsblYn = 'Y'", nativeQuery = true)
+    @Query(value = "SELECT * FROM hospital WHERE SGGU_CD_NM = :sgguCdNm AND SIDO_CD_NM = :sidoCdNm AND PCR_PSBL_YN = 'Y'", nativeQuery = true)
     public List<Hospital> mFindHospital(@Param("sidoCdNm") String sidoCdNm, @Param("sgguCdNm") String sgguCdNm);
 	
 	// String도 됐었낭? 됨!! 저장하면 안됨..데이터 다시 받아야함 저장은 하지말장 - order by 추가
