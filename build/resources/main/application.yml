@@ -11,10 +11,11 @@ spring:
     username: mess
     password : mess
 
-jpa:
-  open-in-view: true;
-  hibernate:
-    ddl-auto: create
-    naming:
-      physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-  show-sql: true
+  jpa:
+    database-platform: org.hibernate.dialect.Oracle12cDialect
+    open-in-view: true
+    hibernate:
+      ddl-auto: create
+      #naming:
+      #  physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true

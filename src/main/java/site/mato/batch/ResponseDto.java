@@ -5,7 +5,6 @@ import java.util.List;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-import site.mato.domain.Hosp;
 
 //1.임포트 하기 (alt + shift + o) 인텔리J 키맵사용
 //2.private -> private로 변경하기 
@@ -37,8 +36,8 @@ class Item {
 	private String sgguCdNm;
 	private String sidoCdNm;
 	private String telno;
-	private Long xPosWgs84;
-	private Long yPosWgs84;
+	private String xPosWgs84;
+	private String yPosWgs84;
 	private String yadmNm;
 	private String ykihoEnc;
 }

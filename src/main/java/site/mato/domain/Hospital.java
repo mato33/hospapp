@@ -33,8 +33,8 @@ public class Hospital {
 	private String sgguCdNm; //시군구 
 	private String sidoCdNm; //시도명 
 	private String telno; //전화번호 
-	private Long xPosWgs84; //위도 
-	private Long yPosWgs84; //경도 
+	private String xPosWgs84; //위도 
+	private String yPosWgs84; //경도 
 	private String yadmNm; //요양기관명 
 	private String ykihoEnc; //암호화된 요양기호 
 }

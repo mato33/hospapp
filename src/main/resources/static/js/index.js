@@ -11,7 +11,7 @@ document.querySelector("#btn-submit").addEventListener("click",(e) =>{
 });
 
 let getHospital = async (sidoCdNm,sgguCdNm) =>{
-	let response = await fetch(`http://localhost:8000/api/hospital?sidoCdNm=${sidoCdNm}&sgguCdNm=${sgguCdNm}`);
+	let response = await fetch(`http://signdev.iptime.org:8000/api/hospital?sidoCdNm=${sidoCdNm}&sgguCdNm=${sgguCdNm}`);
 	let responsePasing = await response.json();
 	
 	console.log(responsePasing);
@@ -30,14 +30,17 @@ let setHospital = (responsePasing) => {
         let tdEL1 = document.createElement("td");
         let tdEL2 = document.createElement("td");
         let tdEL3 = document.createElement("td");
+        let tdEL4 = document.createElement("td");
 
         tdEL1.innerHTML = e.yadmNm;
         tdEL2.innerHTML = e.pcrPsblYn;
-        tdEL3.innerHTML = e.addr;
+        tdEL3.innerHTML = e.telno;
+        tdEL4.innerHTML = e.addr;
 
         trEL.append(tdEL1);
         trEL.append(tdEL2);
         trEL.append(tdEL3);
+        trEL.append(tdEL4);
         tbodyHospitalDom.append(trEL);
 	});
 };
@@ -56,7 +59,7 @@ let setSggucdnm = (responsePasing) => {
 };
 
 let getSggucdnm = async(sidoCdNm) => {
-	let response = await fetch(`http://localhost:8000/api/sgguCdNm?sidoCdNm=${sidoCdNm}`);
+	let response = await fetch(`http://signdev.iptime.org:8000/api/sgguCdNm?sidoCdNm=${sidoCdNm}`);
 	let responsePasing = await response.json();
 	setSggucdnm(responsePasing);
 };

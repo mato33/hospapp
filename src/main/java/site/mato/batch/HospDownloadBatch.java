@@ -2,7 +2,6 @@ package site.mato.batch;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import org.springframework.scheduling.annotation.Scheduled;
@@ -10,7 +9,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import site.mato.domain.Hospital;
 import site.mato.domain.HospitalRepository;
 
@@ -28,7 +26,7 @@ public class HospDownloadBatch {
 	private final HospitalRepository hospitalRepository;
 	
 	//초 분 시 일 월 주 
-	@Scheduled(cron = "0 54 * * * *",zone = "Asia/Seoul")
+	@Scheduled(cron = "0 57 * * * *",zone = "Asia/Seoul")
 	public void startBatch() {
 		System.out.println("1분 마다 실행됨");
 	
