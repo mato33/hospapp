@@ -21,6 +21,7 @@ let getHospital = async (sidoCdNm,sgguCdNm) =>{
 
 let setHospital = (responsePasing) => {
 	let tbodyHospitalDom = document.querySelector("#tbody-hospital");
+	document.getElementById("resultCnt").innerText = "조회건수 : " + responsePasing.length + "건";
 	tbodyHospitalDom.innerHTML = "";
 	
 	//리턴이 필요없으니 forEach로
